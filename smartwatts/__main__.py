@@ -13,7 +13,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
-
+import sys
 import logging
 import signal
 from collections import OrderedDict
@@ -172,6 +172,7 @@ def run_smartwatts(args) -> None:
 
 
 if __name__ == "__main__":
+    print(sys.argv)
     parser = CommonCLIParser()
     parser.add_formula_subparser('formula', generate_smartwatts_parser(), 'specify the formula to use')
     config = parser.parse_argv()
