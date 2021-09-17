@@ -120,7 +120,7 @@ def run_smartwatts(args) -> None:
     :param args: CLI arguments namespace
     :param logger: Logger to use for the actors
     """
-    fconf = args['formula']
+    fconf = args['formula']["smartwatts"]
 
     logging.info('SmartWatts version %s using PowerAPI version %s', smartwatts_version, powerapi_version)
 
